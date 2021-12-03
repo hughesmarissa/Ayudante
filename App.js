@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
         color: '#fff',
         backgroundColor: '#64F5E9',
         width: 150,
-        borderRadius: 150/2.5,
-        margin: 10,
+        borderRadius: 150/3.5,
+        margin: 15,
         lineHeight: 150,
         textAlign: 'center',
         fontSize: 30,
@@ -45,12 +45,15 @@ const styles = StyleSheet.create({
         color: '#fff',
         backgroundColor: '#64F5E9',
         width: 304,
+        borderRadius: 10,
+        height: 50,
         margin: 2,
         lineHeight: 40,
         textAlign: 'center',
         fontSize: 30,
         fontFamily: 'notoserif',
-        fontStyle: 'italic'
+        fontStyle: 'italic',
+        marginTop: 20
     },
     footerText: {
         color: '#fff',
