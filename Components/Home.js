@@ -1,28 +1,30 @@
-import { NavigationHelpersContext } from '@react-navigation/core';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const Home = ({navigation}) => {
   return (
     <View style={styles.body}>
-        <View style={styles.tabWrapper}>
-            <Text 
-                onPress={() => navigation.navigate('Calendar')}
-                style={styles.tab}>Calendar</Text>
-            <Text 
-                onPress={() => navigation.navigate('Physicality')}
-                style={styles.tab}>Physicality</Text>
-            <Text 
-                onPress={() => navigation.navigate('Advice')}
-                style={styles.tab}>Advice</Text>
-            <Text 
-                onPress={() => navigation.navigate('Personal')}
-                style={styles.tab}>Personal</Text>
-            <Text 
-                onPress={() => navigation.navigate('Login')}
-                style={styles.tabLogin}>Login</Text>
-        </View>
-        <Text style={styles.footerText}>Ayudante</Text>
+        <LinearGradient colors={['#6E7FEB', '#D070F5', '#C74AEB', '#6E7FEB']} style={styles.linearGradient}>
+            <View style={styles.tabWrapper}>
+                <Text 
+                    onPress={() => navigation.navigate('Calendar')}
+                    style={styles.tab}>Calendar</Text>
+                <Text 
+                    onPress={() => navigation.navigate('Physicality')}
+                    style={styles.tab}>Physicality</Text>
+                <Text 
+                    onPress={() => navigation.navigate('Advice')}
+                    style={styles.tab}>Advice</Text>
+                <Text 
+                    onPress={() => navigation.navigate('Personal')}
+                    style={styles.tab}>Personal</Text>
+                <Text 
+                    onPress={() => navigation.navigate('Login')}
+                    style={styles.tabLogin}>Login</Text>
+            </View>
+            <Text style={styles.footerText}>Ayudante</Text>
+        </LinearGradient>
     </View>
   );
 }
@@ -30,9 +32,14 @@ const Home = ({navigation}) => {
 
 const styles = StyleSheet.create({
     body: {
-        backgroundColor: '#333',
         flex: 1
     },
+    linearGradient: {
+        flex: 1,
+        paddingLeft: 15,
+        paddingRight: 15,
+        borderRadius: 5
+      },
     tabWrapper: { 
         flex: 1,
         flexDirection: 'row',
