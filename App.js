@@ -18,11 +18,31 @@ const App = () => {
     <>
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Home" component={Home} options={{ title: 'Ayudante'}} />
-                <Stack.Screen name="Personal" component={Personal} options={{ title: 'Personal'}} />
-                <Stack.Screen name="Calendar" component={Calendar} options={{ title: 'Calendar'}} />
-                <Stack.Screen name="Advice" component={Advice} options={{ title: 'Advice'}} />
-                <Stack.Screen name="Physicality" component={Physicality} options={{ title: 'Physicality'}} />
+                <Stack.Screen 
+                    name="Home" 
+                    component={Home} 
+                    options={{ title: 'Ayudante'}} 
+                />
+                <Stack.Screen 
+                    name="Personal" 
+                    component={Personal} 
+                    options={{ title: 'Personal'}} 
+                />
+                <Stack.Screen 
+                    name="Calendar" 
+                    component={Calendar} 
+                    options={{ title: 'Calendar'}} 
+                />
+                <Stack.Screen 
+                    name="Advice" 
+                    component={Advice} 
+                    options={{ title: 'Advice'}} 
+                />
+                <Stack.Screen 
+                    name="Physicality" 
+                    component={Physicality} 
+                    options={{ title: 'Physicality'}} 
+                />    
             </Stack.Navigator>
         </NavigationContainer>
     </>

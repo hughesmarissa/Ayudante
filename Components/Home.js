@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         paddingLeft: 15,
         paddingRight: 15,
         borderRadius: 5
-      },
+    },
     tabWrapper: { 
         flex: 1,
         flexDirection: 'row',
