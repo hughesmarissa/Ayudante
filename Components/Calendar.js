@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Avatar } from 'react-native-elements';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
-import { Card, Avatar } from 'react-naitve-paper';
+import { Agenda } from 'react-native-calendars';
+import { Card } from 'react-native-paper';
 
 const timeToString = (time) => {
     const date = new Date(time);
@@ -37,7 +38,21 @@ const Scheduler = () => {
     };
 
     const renderItem = (item) => {
-        
+        return (
+            <TouchableOpacity style={{ marginRight: 10, marginTop: 10 }}>
+                <Card>
+                    <Card.Content>
+                        <View style={styles.cardPerDate}>
+                            <Text>{item.name}</Text>
+                            <Avatar 
+                                style={{ backgroundColor: 'black'}}
+                                icon={{name: 'user', type: 'font-awesome'}}
+                            />
+                        </View>
+                    </Card.Content>
+                </Card>
+            </TouchableOpacity>
+        );
     };
 
     return (
@@ -65,6 +80,12 @@ const styles = StyleSheet.create({
         paddingLeft: 15,
         paddingRight: 15,
         borderRadius: 5
+    },
+    cardPerDate: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',  
+        backgroundColor: '#fff'
     },
     footerText: {
         color: '#fff',
