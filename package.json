@@ -6,7 +6,8 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b main -d build",
-    "start": "expo start",
+    "build": "react-scripts buid",
+    "start": "react-scripts start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
